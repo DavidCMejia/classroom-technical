@@ -3,7 +3,7 @@ from django.db import models
 
 class User(AbstractUser):
     name = models.CharField(max_length=100)
-    role = models.ForeignKey('Role', on_delete=models.CASCADE)
+    role = models.ForeignKey('Role', on_delete=models.CASCADE, null=True)
     email = models.CharField(max_length=100)
     password = models.CharField(max_length=100)
 
